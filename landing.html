@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="landing.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>My To-Do List</title>
+  </head>
+
+  <body>
+    <!-- Progress BAR -->
+    <!-- <div class="progressContainer">
+      <div class="skill">
+        <div class="outer">
+          <div class="inner">
+            <div id="number">0%</div>
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            width="300px"
+            height="300px"
+          >
+            <defs>
+              <linearGradient id="GradientColor">
+                <stop offset="0%" stop-color="#e91e63" />
+                <stop offset="100%" stop-color="#673ab7" />
+              </linearGradient>
+            </defs>
+            <circle cx="200" cy="200" r="70" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+    </div> -->
+    <header>
+      <nav id="nav-bar">
+        <ul id="nav-menu">
+          <li><a href="./landing.html">Mes notes</a></li>
+          <li><a href="./Chronomètre/Chronomètre.html">Chronomètre</a></li>
+          <li><a href="./Calendar/Calendar.html">Calendrier</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h1>My To-Do List <img src="./Icone/IconeToDoList.png" alt="" /></h1>
+    <main>
+      <section id="to-do-list">
+        <div class="container-toDo">
+          <div class="text-addBtn">
+            <textarea
+              name="inputText"
+              id="input-text"
+              placeholder="Que veux tu rajouter ?..."
+            ></textarea>
+            <button onclick="addTask()"></button>
+            <button id="deleteBtn"></button>
+          </div>
+          <ul id="list-Container">
+            <!-- <li class="checked">Task1</li>
+            <li>Task2</li>
+            <li>Task3</li> -->
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script src="./landing.js"></script>
+  </body>
+</html>

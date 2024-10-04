@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Chonomètre.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>My Timer</title>
+  </head>
+  <body>
+    <header>
+      <nav id="nav-bar">
+        <ul id="nav-menu">
+          <li><a href="../landing.html">Mes notes</a></li>
+          <li><a href="./Chronomètre.html">Chronomètre</a></li>
+          <li><a href="../Calendar/Calendar.html">Calendrier</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>My Timer<img src="../Icone/iconeChrono.png" alt="" /></h1>
+      <section id="chronometre">
+        <div class="container">
+          <span>0 h</span>: <span>0 min</span>: <span>0 s</span>:
+          <span>0 ms</span>
+        </div>
+        <div class="controls">
+          <button onclick="start()" id="start">
+            <img src="../Icone/iconePlay.png" />
+          </button>
+          <button onclick="stop()" id="stop">
+            <img src="../Icone/iconePause.png" />
+          </button>
+          <button onclick="reset()" id="reset">
+            <img src="../Icone/IconeReset.png" />
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="./Chrnomètre.js"></script>
+  </body>
+</html>

@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e9f1fa;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Lora", serif;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 img {
+  width: 50px;
+  margin-left: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #00abe4;
+  width: 100%;
+  height: 50px;
+}
+
+.progressContainer {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(211, 213, 235);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill {
+  width: 160px;
+  height: 160px;
+  border: 1px solid;
+  position: relative;
+}
+
+.outer {
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.15),
+    -6px -7px 20px 7px rgb(251 251 251 / 70%);
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  padding-left: 40px;
+  padding-top: 40px;
+}
+
+.inner {
+  box-shadow: inset 2px -1px 11px 6px rgb(251 251 251 / 70%),
+    inset 1px 1px 14px 7px rgba(0, 0, 0, 0.15),
+    -1px 1px 20px 6px rgb(255 255 255 / 70%),
+    0px 1px 20px 10px rgba(0, 0, 0, 0.15),
+    -1px -5px 14px 7px rgba(0, 0, 0, 0.15);
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#number {
+  font-weight: 600;
+  color: #00abe4;
+  font-size: 25px;
+}
+
+circle {
+  fill: none;
+  stroke: url("#GradientColor");
+  stroke-width: 35px;
+  stroke-dasharray: 450;
+  stroke-dashoffset: 0;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#nav-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#nav-menu li a {
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 100px;
+  color: white;
+  font-family: "Lora", serif;
+}
+
+#to-do-list {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  border: 0px solid;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: rgb(255, 255, 255);
+  height: 50vh;
+  width: 100vh;
+  border-radius: 15px;
+  overflow-y: auto;
+}
+
+#input-text {
+  font-family: "Lora", sans-serif;
+  resize: none;
+  border-radius: 10px;
+  font-size: 17px;
+  height: 50px;
+  width: 50vh;
+  text-align: center;
+  margin-top: 20px;
+  border: 0px solid;
+  box-shadow: rgba(0, 0, 0, 0.24) -2px 3px 20px 2px;
+}
+
+.text-addBtn {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 3px;
+  z-index: 10;
+}
+
+.text-addBtn button {
+  width: 40px;
+  height: 40px;
+  background: url(./Icone/IconeAdd.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 0px solid;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.text-addBtn button:hover {
+  background-image: url(./Icone/iconeAddFilled.png);
+  transition: 0.2s;
+}
+
+#deleteBtn {
+  margin-top: 20px;
+  background-image: url(./Icone/IconeDelete.png);
+  background-size: cover;
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  border: none;
+}
+
+#list-Container li {
+  list-style: none;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 35px;
+  font-size: 23px;
+  cursor: pointer;
+  position: relative;
+}
+
+#list-Container li::before {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-image: url(./Icone/iconeUnchecked.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  left: 10px;
+}
+
+#list-Container li.checked {
+  text-decoration: line-through;
+  color: red;
+}
+
+#list-Container li.checked::before {
+  background-image: url(./Icone/iconeChecked.png);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 14px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 100px solid #c2dde6;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 43px none #ffffff;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
